@@ -34,7 +34,7 @@ export async function validate(emailOrOptions: string | ValidatorOptions): Promi
   }
     
   if (options.validateSMTP) {
-    return checkSMTP(options.sender, email, mx.exchange)
+    return checkSMTP(options.sender, email, domain)
   }
 
   return createOutput()
